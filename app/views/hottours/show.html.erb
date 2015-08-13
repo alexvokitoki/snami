@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @hottour.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @hottour.price %>
+</p>
+
+<p>
+  <strong>Imgurl:</strong>
+  <%= @hottour.imgurl %>
+</p>
+
+<p>
+  <strong>About:</strong>
+  <%= @hottour.about %>
+</p>
+
+<%= link_to 'Edit', edit_hottour_path(@hottour) %> |
+<%= link_to 'Back', hottours_path %>

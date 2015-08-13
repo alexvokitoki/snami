@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @bustour.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @bustour.price %>
+</p>
+
+<p>
+  <strong>Imgurl:</strong>
+  <%= @bustour.imgurl %>
+</p>
+
+<p>
+  <strong>About:</strong>
+  <%= @bustour.about %>
+</p>
+
+<%= link_to 'Edit', edit_bustour_path(@bustour) %> |
+<%= link_to 'Back', bustours_path %>

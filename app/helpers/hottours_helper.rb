@@ -1,0 +1,2 @@
+module HottoursHelper
+end

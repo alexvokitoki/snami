@@ -1,0 +1,33 @@
+<h1>Listing bustours</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Imgurl</th>
+      <th>About</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bustours.each do |bustour| %>
+      <tr>
+        <td><%= bustour.name %></td>
+        <td><%= bustour.price %></td>
+        <td><%= bustour.imgurl %></td>
+        <td><%= bustour.about %></td>
+        <td><%= link_to 'Show', bustour %></td>
+        <td><%= link_to 'Edit', edit_bustour_path(bustour) %></td>
+        <td><%= link_to 'Destroy', bustour, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bustour', new_bustour_path %>

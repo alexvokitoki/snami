@@ -1,0 +1,33 @@
+<h1>Listing hottours</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Imgurl</th>
+      <th>About</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hottours.each do |hottour| %>
+      <tr>
+        <td><%= hottour.name %></td>
+        <td><%= hottour.price %></td>
+        <td><%= hottour.imgurl %></td>
+        <td><%= hottour.about %></td>
+        <td><%= link_to 'Show', hottour %></td>
+        <td><%= link_to 'Edit', edit_hottour_path(hottour) %></td>
+        <td><%= link_to 'Destroy', hottour, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hottour', new_hottour_path %>

@@ -1,0 +1,33 @@
+<%= form_for(@bustour) do |f| %>
+  <% if @bustour.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bustour.errors.count, "error") %> prohibited this bustour from being saved:</h2>
+
+      <ul>
+      <% @bustour.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :imgurl %><br>
+    <%= f.text_field :imgurl %>
+  </div>
+  <div class="field">
+    <%= f.label :about %><br>
+    <%= f.text_area :about %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
