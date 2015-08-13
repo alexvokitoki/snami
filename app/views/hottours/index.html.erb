@@ -1,12 +1,12 @@
-<h1>Listing hottours</h1>
+<h1>Автобусные туры</h1>
 
-<table>
+<table  border="1px">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Price</th>
+      <th>Название</th>
+      <th>Цена</th>
       <th>Imgurl</th>
-      <th>About</th>
+      <th>О туре</th>
       <th></th>
       <th></th>
       <th></th>
@@ -18,11 +18,11 @@
       <tr>
         <td><%= hottour.name %></td>
         <td><%= hottour.price %></td>
-        <td><%= hottour.imgurl %></td>
+        <td><img class="photo" src=<%= hottour.imgurl %> width="400" height="200"><td>
         <td><%= hottour.about %></td>
-        <td><%= link_to 'Show', hottour %></td>
-        <td><%= link_to 'Edit', edit_hottour_path(hottour) %></td>
-        <td><%= link_to 'Destroy', hottour, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Показать', hottour %></td>
+        <td><%= link_to 'Редактировать', edit_hottour_path(hottour) %></td>
+        <td><%= link_to 'Удалить', hottour, method: :delete, data: { confirm: 'Ты уверена?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Hottour', new_hottour_path %>
+<%= link_to 'Новый тур', new_hottour_path %>

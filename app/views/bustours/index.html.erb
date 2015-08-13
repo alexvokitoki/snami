@@ -1,12 +1,12 @@
-<h1>Listing bustours</h1>
+<h1>Автобусные туры</h1>
 
-<table>
+<table  border="1px">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Price</th>
+      <th>Название</th>
+      <th>Цена</th>
       <th>Imgurl</th>
-      <th>About</th>
+      <th>О туре</th>
       <th></th>
       <th></th>
       <th></th>
@@ -18,11 +18,11 @@
       <tr>
         <td><%= bustour.name %></td>
         <td><%= bustour.price %></td>
-        <td><%= bustour.imgurl %></td>
+        <td><img class="photo" src=<%= bustour.imgurl %> width="400" height="200"><td>
         <td><%= bustour.about %></td>
-        <td><%= link_to 'Show', bustour %></td>
-        <td><%= link_to 'Edit', edit_bustour_path(bustour) %></td>
-        <td><%= link_to 'Destroy', bustour, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Показать', bustour %></td>
+        <td><%= link_to 'Редактировать', edit_bustour_path(bustour) %></td>
+        <td><%= link_to 'Удалить', bustour, method: :delete, data: { confirm: 'Ты уверена?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Bustour', new_bustour_path %>
+<%= link_to 'Новый тур', new_bustour_path %>
