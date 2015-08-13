@@ -1,6 +1,6 @@
 <h1>Listing countries</h1>
 
-<table>
+<table border="1px">
   <thead>
     <tr>
       <th>Name</th>
@@ -16,7 +16,7 @@
     <% @countries.each do |country| %>
       <tr>
         <td><%= country.name %></td>
-        <td><%= country.imgurl %></td>
+        <td><img class="photo" src=<%= country.imgurl %> width="400" height="200"><td>
         <td><%= country.about %></td>
         <td><%= link_to 'Show', country %></td>
         <td><%= link_to 'Edit', edit_country_path(country) %></td>
